@@ -1,7 +1,13 @@
 import React, { Component } from 'react';
+import { getNews } from '../../utilities/helper';
 import './App.css';
 
 class App extends Component {
+
+  componentDidMount() {
+    getNews()
+  }
+
   render() {
     return (
       <div className="App">
