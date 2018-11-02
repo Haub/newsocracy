@@ -10,7 +10,6 @@ class App extends Component {
 
   handleClick = async(category) => {
     const updatedNews = await getNews(category);
-    console.log(updatedNews)
     this.props.addCategoryNews(updatedNews);
   }
 
@@ -26,7 +25,7 @@ class App extends Component {
             <button 
               className="topic-button"
               name='immigration'
-              onClick={this.handleClick('immigration')}
+              onClick={()=>this.handleClick('immigration')}
             >
               Immigration
             </button>
@@ -35,7 +34,7 @@ class App extends Component {
           <NavLink to="/climate" activeClassName="selected">
             <button 
               className="topic-button"
-              onClick={this.handleClick('climate')}
+              onClick={()=>this.handleClick('climate')}
             >
               Climate Change
             </button>
@@ -43,7 +42,7 @@ class App extends Component {
           <NavLink to="/midterms" activeClassName="selected">
             <button 
               className="topic-button"
-              onClick={this.handleClick('midterm, elections')}
+              onClick={()=>this.handleClick('midterm, elections')}
             >
               Midterm Elections
             </button>
@@ -51,7 +50,7 @@ class App extends Component {
           <NavLink to="/healthcare" activeClassName="selected">
             <button 
               className="topic-button"
-              onClick={this.handleClick('healthcare')}
+              onClick={()=>this.handleClick('healthcare')}
             >
               Healthcare
             </button>
@@ -59,7 +58,7 @@ class App extends Component {
           <NavLink to="/refugees" activeClassName="selected">
             <button 
               className="topic-button"
-              onClick={this.handleClick('refugees')}
+              onClick={()=>this.handleClick('refugees')}
             >
               Refugees
             </button>
@@ -76,6 +75,5 @@ class App extends Component {
 export const mapDispatchToProps = (dispatch) => ({
   addCategoryNews: (articles) => dispatch(addCategoryNews(articles))
 });
-// export default App;
 
 export default withRouter(connect(null, mapDispatchToProps)(App));
