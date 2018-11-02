@@ -5,14 +5,13 @@ export const getNews = async(category) => {
   const centerResponse = await getNewsFromCenter(category);
   const rightResponse = await getNewsFromRight(category);
   const allNews = {
-    left: {...leftResponse},
-    center: {...centerResponse},
-    right: {...rightResponse}
+    left: {...leftResponse.articles},
+    center: {...centerResponse.articles},
+    right: {...rightResponse.articles}
   }
+  console.log(allNews)
   return allNews
 };
-
-
 
 export const getNewsFromLeft = async(category) => {
   const response = await fetch(`https://newsapi.org/v2/everything?q=${category}&domains=huffingtonpost.com,msnbc.com&sortBy=publishedAt&apiKey=${key}`);
@@ -29,7 +28,6 @@ export const getNewsFromCenter = async(category) => {
 export const getNewsFromRight = async(category) => {
   const response = await fetch(`https://newsapi.org/v2/everything?q=${category}&domains=breitbart.com,foxnews.com&sortBy=publishedAt&apiKey=${key}`);
   const data = await response.json();
-  console.log(data);
   return data
 };
 
