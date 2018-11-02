@@ -1,15 +1,18 @@
 import { key } from './apiKey';
+import { cleanNewsData } from './cleaner.js'
 
 export const getNews = async(category) => {
   const leftResponse = await getNewsFromLeft(category);
   const centerResponse = await getNewsFromCenter(category);
   const rightResponse = await getNewsFromRight(category);
+  const leftArticles = leftResponse.articles.map(article => cleanNewsData(article));
+  const rightArticles = rightResponse.articles.map(article => cleanNewsData(article));
+  const centerArticles = centerResponse.articles.map(article => cleanNewsData(article));
   const allNews = {
-    left: {...leftResponse.articles},
-    center: {...centerResponse.articles},
-    right: {...rightResponse.articles}
+    left: [...leftArticles],
+    center: [...centerArticles],
+    right: [...rightArticles]
   }
-  console.log(allNews)
   return allNews
 };
 
