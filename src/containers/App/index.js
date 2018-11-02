@@ -1,12 +1,17 @@
 import React, { Component } from 'react';
 import { getNews } from '../../utilities/helper';
-import { NavLink } from 'react-router-dom';
+import { Router, NavLink, withRouter } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { addCategoryNews } from '../../actions';
+import { NewsContainer } from '../NewsContainer';
 import './App.css';
 
 class App extends Component {
 
-  componentDidMount() {
-  
+  handleClick = async(category) => {
+    const updatedNews = await getNews(category);
+    console.log(updatedNews)
+    this.props.addCategoryNews(updatedNews);
   }
 
   render() {
@@ -20,7 +25,8 @@ class App extends Component {
           <NavLink to="/immigration" activeClassName="selected">
             <button 
               className="topic-button"
-              onClick={()=>getNews('immigration')}
+              name='immigration'
+              onClick={this.handleClick('immigration')}
             >
               Immigration
             </button>
@@ -29,7 +35,7 @@ class App extends Component {
           <NavLink to="/climate" activeClassName="selected">
             <button 
               className="topic-button"
-              onClick={()=>getNews('climate')}
+              onClick={this.handleClick('climate')}
             >
               Climate Change
             </button>
@@ -37,7 +43,7 @@ class App extends Component {
           <NavLink to="/midterms" activeClassName="selected">
             <button 
               className="topic-button"
-              onClick={()=>getNews('midterm, elections')}
+              onClick={this.handleClick('midterm, elections')}
             >
               Midterm Elections
             </button>
@@ -45,7 +51,7 @@ class App extends Component {
           <NavLink to="/healthcare" activeClassName="selected">
             <button 
               className="topic-button"
-              onClick={()=>getNews('healthcare')}
+              onClick={this.handleClick('healthcare')}
             >
               Healthcare
             </button>
@@ -53,18 +59,23 @@ class App extends Component {
           <NavLink to="/refugees" activeClassName="selected">
             <button 
               className="topic-button"
-              onClick={()=>getNews('refugees')}
+              onClick={this.handleClick('refugees')}
             >
               Refugees
             </button>
           </NavLink>
         </section>
         <div className="routes">
-      
+          <NewsContainer />
         </div>
       </div>
     );
   }
 }
 
-export default App;
+export const mapDispatchToProps = (dispatch) => ({
+  addCategoryNews: (articles) => dispatch(addCategoryNews(articles))
+});
+// export default App;
+
+export default withRouter(connect(null, mapDispatchToProps)(App));
