@@ -1,7 +1,7 @@
 import React from 'react';
 
-export const NewsTitle = ({ title, source, url, image, author }) => {
-  console.log(title)
+export const NewsTitle = ({ leftArticle, centerArticle, rightArticle }) => {
+  console.log(leftArticle.title)
 
 
   return (

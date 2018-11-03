@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { getNews } from '../../utilities/helper';
-import { Router, NavLink, withRouter } from 'react-router-dom';
+import { Route, NavLink, withRouter, Switch, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { addCategoryNews } from '../../actions';
 import { NewsContainer } from '../NewsContainer';
@@ -14,6 +14,7 @@ class App extends Component {
   }
 
   render() {
+    const { articles } = this.props;
     return (
       <div className="App">
         <header className="App-header">
@@ -64,17 +65,25 @@ class App extends Component {
             </button>
           </NavLink>
         </section>
-        
-        <div className="routes">
-          <NewsContainer />
-        </div>
+        <Switch>
+          <Route path='/immigration' render={() => (<NewsContainer articles={articles} /> )} />
+          <Route path='/climate' render={() => (<NewsContainer articles={articles} />)} />
+          <Route path='/midterms' render={() => (<NewsContainer articles={articles} />)} />
+          <Route path='/healthcare' render={() => (<NewsContainer articles={articles} />)} />
+          <Route path='/refugees' render={() => (<NewsContainer articles={articles} />)} />
+          <Redirect from='*' to='/' />
+        </Switch>
       </div>
     );
   }
 }
 
+export const mapStateToProps = (state) => ({
+  articles: state.articles
+})
+
 export const mapDispatchToProps = (dispatch) => ({
   addCategoryNews: (articles) => dispatch(addCategoryNews(articles))
 });
 
-export default withRouter(connect(null, mapDispatchToProps)(App));
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App));

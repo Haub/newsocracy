@@ -13,6 +13,7 @@ export const getNews = async(category) => {
     center: [...centerArticles],
     right: [...rightArticles]
   }
+  console.log(allNews.left)
   return allNews
 };
 
