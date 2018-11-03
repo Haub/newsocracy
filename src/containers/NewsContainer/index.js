@@ -2,44 +2,31 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { NewsTitle } from '../../components/NewsTitle';
 
-export const NewsContainer = () => {
-
+export const NewsContainer = (props) => {
   const {articles} = props;
+  console.log(articles)
+  
+
   let uuidv4 = require("uuid/v4");
-
-  const displayLeft = articles.left.map(leftArticle => (
+  
+  const displayArticles = articles.map(article => (
     <NewsTitle
-      {...leftArticle}
+      article={article}
       key={uuidv4()}
     />
   ))
 
-  const displayCenter = articles.center.map(centerArticle => (
-    <NewsTitle
-      {...centerArticle}
-      key={uuidv4()}
-    />
-  ))
-
-  const displayRight = articles.right.map(rightArticle => (
-    <NewsTitle
-      {...rightArticle}
-      key={uuidv4()}
-    />
-  ))
   
   return (
     <section>
-      <article className='left-container'> {displayLeft} </article>
-      <article className='center-container'> {displayCenter} </article>
-      <article className='right-container'> {displayRight} </article>
+      { displayArticles }
     </section>
   )
 };
 
 
-export const mapStateToProps = (state) => ({
-  articles: state.articles
-});
+// export const mapStateToProps = (state) => ({
+//   articles: state.articles
+// });
 
-export default connect(mapStateToProps)(NewsContainer);
+// export default connect(mapStateToProps, null)(NewsContainer);
