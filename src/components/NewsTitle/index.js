@@ -1,29 +1,40 @@
 import React from 'react';
+import './NewsTitle.css';
 
 export const NewsTitle = ({ article }) => {
 
 
   return (
-    <div>
+    <div className='container'>
     
     {
       article.category ==='left' && 
-        <article>
-          <h3>{article.title} <span>{article.author}</span></h3>
+        <article className='left column'>
+          <img src={article.image} height='30px' width='30px' alt='' />
+            <h3>{article.title} 
+            <p>{article.source.name}</p>
+            <p>{article.date}</p>
+            </h3>
         </article> 
     }
 
     {
       article.category ==='center' && 
-        <article>
-          <h3>{article.title} <span>{article.author}</span></h3>
+        <article className='center column'>
+          <img src={article.image} height='30px' width='30px' alt='' />
+          <h3>{article.title} 
+            <p>{article.source.name}</p>
+          </h3>
         </article> 
     }
 
     {
       article.category ==='right' && 
-        <article>
-          <h3>{article.title} <span>{article.author}</span></h3>
+        <article className='right column'>
+        <img src={article.image} height='30px' width='30px' alt='' />
+          <h3>{article.title} 
+            <p>{article.source.name}</p>
+          </h3>
         </article> 
     }
 

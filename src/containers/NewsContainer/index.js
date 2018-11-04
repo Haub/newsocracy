@@ -1,22 +1,17 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import { NewsTitle } from '../../components/NewsTitle';
 
 export const NewsContainer = (props) => {
-  const {articles} = props;
-  console.log(articles)
-  
-
   let uuidv4 = require("uuid/v4");
+  const {articles} = props;
   
   const displayArticles = articles.map(article => (
     <NewsTitle
       article={article}
       key={uuidv4()}
     />
-  ))
+  ));
 
-  
   return (
     <section>
       { displayArticles }
@@ -24,9 +19,3 @@ export const NewsContainer = (props) => {
   )
 };
 
-
-// export const mapStateToProps = (state) => ({
-//   articles: state.articles
-// });
-
-// export default connect(mapStateToProps, null)(NewsContainer);
