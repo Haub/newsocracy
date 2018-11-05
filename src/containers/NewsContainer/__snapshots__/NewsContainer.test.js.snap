@@ -1,0 +1,350 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match the snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <NewsContainer
+    articles={
+      Array [
+        Object {
+          "source": "npr.org",
+          "title": "Name",
+        },
+      ]
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <section
+          className="left column"
+        >
+          <h2>
+            From the Left:
+          </h2>
+          <NewsTitle
+            article={
+              Object {
+                "source": "npr.org",
+                "title": "Name",
+              }
+            }
+          />
+        </section>,
+        <section
+          className="center column"
+        >
+          <h2>
+            From the Center:
+          </h2>
+        </section>,
+        <section
+          className="right column"
+        >
+          <h2>
+            From the Right:
+          </h2>
+        </section>,
+      ],
+      "className": "news-container",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <h2>
+              From the Left:
+            </h2>,
+            Array [
+              <NewsTitle
+                article={
+                  Object {
+                    "source": "npr.org",
+                    "title": "Name",
+                  }
+                }
+              />,
+            ],
+          ],
+          "className": "left column",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "From the Left:",
+            },
+            "ref": null,
+            "rendered": "From the Left:",
+            "type": "h2",
+          },
+          Object {
+            "instance": null,
+            "key": "659e4d1f-94fb-40f2-bee7-16f2c0d47092",
+            "nodeType": "function",
+            "props": Object {
+              "article": Object {
+                "source": "npr.org",
+                "title": "Name",
+              },
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": "section",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <h2>
+              From the Center:
+            </h2>,
+            Array [],
+          ],
+          "className": "center column",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "From the Center:",
+            },
+            "ref": null,
+            "rendered": "From the Center:",
+            "type": "h2",
+          },
+        ],
+        "type": "section",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <h2>
+              From the Right:
+            </h2>,
+            Array [],
+          ],
+          "className": "right column",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "From the Right:",
+            },
+            "ref": null,
+            "rendered": "From the Right:",
+            "type": "h2",
+          },
+        ],
+        "type": "section",
+      },
+    ],
+    "type": "main",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <section
+            className="left column"
+          >
+            <h2>
+              From the Left:
+            </h2>
+            <NewsTitle
+              article={
+                Object {
+                  "source": "npr.org",
+                  "title": "Name",
+                }
+              }
+            />
+          </section>,
+          <section
+            className="center column"
+          >
+            <h2>
+              From the Center:
+            </h2>
+          </section>,
+          <section
+            className="right column"
+          >
+            <h2>
+              From the Right:
+            </h2>
+          </section>,
+        ],
+        "className": "news-container",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <h2>
+                From the Left:
+              </h2>,
+              Array [
+                <NewsTitle
+                  article={
+                    Object {
+                      "source": "npr.org",
+                      "title": "Name",
+                    }
+                  }
+                />,
+              ],
+            ],
+            "className": "left column",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "From the Left:",
+              },
+              "ref": null,
+              "rendered": "From the Left:",
+              "type": "h2",
+            },
+            Object {
+              "instance": null,
+              "key": "659e4d1f-94fb-40f2-bee7-16f2c0d47092",
+              "nodeType": "function",
+              "props": Object {
+                "article": Object {
+                  "source": "npr.org",
+                  "title": "Name",
+                },
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": "section",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <h2>
+                From the Center:
+              </h2>,
+              Array [],
+            ],
+            "className": "center column",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "From the Center:",
+              },
+              "ref": null,
+              "rendered": "From the Center:",
+              "type": "h2",
+            },
+          ],
+          "type": "section",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <h2>
+                From the Right:
+              </h2>,
+              Array [],
+            ],
+            "className": "right column",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "From the Right:",
+              },
+              "ref": null,
+              "rendered": "From the Right:",
+              "type": "h2",
+            },
+          ],
+          "type": "section",
+        },
+      ],
+      "type": "main",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
