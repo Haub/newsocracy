@@ -1,15 +1,15 @@
 import { key } from './apiKey';
-import { getNewsFromLeft } from './helper.js';
+import { getLeftNews, getCenterNews, getRightNews } from './helper.js';
 import { cleaner } from './cleaner.js';
 
 describe('HELPER', () => {
-  it('should call getNewsFromLeft with the correct params', async() => {
-    const expected = `https://newsapi.org/v2/everything?q=immigration&domains=huffingtonpost.com,msnbc.com&sortBy=publishedAt&apiKey=${key}`;
+  it('should call getLeftNews with the correct params', async() => {
+    const expected = `https://newsapi.org/v2/everything?q=undefined&domains=huffingtonpost.com,msnbc.com&sortBy=publishedAt&apiKey=${key}`;
     window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
         ok: true,
         json: () => Promise.resolve(expected)
     }));
-    await getNewsFromLeft();
+    await getLeftNews();
     expect(window.fetch).toHaveBeenCalledWith(expected);
   });
 
@@ -20,11 +20,31 @@ describe('HELPER', () => {
       ok: true,
       json: () => Promise.resolve( data )
     }));
-    await getNewsFromLeft();
+    await getLeftNews();
     expect(window.fetch).toHaveBeenCalledWith(...expected);
   });
 
   it('should return false if no data comes back', () => {
+  });
+
+  it('should call getCenterNews with the correct params', async() => {
+    const expected = `https://newsapi.org/v2/everything?q=undefined&domains=domains=npr.org,bbc.com,cnn.com&sortBy=publishedAt&apiKey=${key}`;
+    window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
+        ok: true,
+        json: () => Promise.resolve(expected)
+    }));
+    await getCenterNews();
+    expect(window.fetch).toHaveBeenCalledWith(expected);
+  });
+
+  it('should call getRightNews with the correct params', async() => {
+    const expected = `https://newsapi.org/v2/everything?q=undefined&domains=breitbart.com,foxnews.com&sortBy=publishedAt&apiKey=${key}`;
+    window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
+        ok: true,
+        json: () => Promise.resolve(expected)
+    }));
+    await getRightNews();
+    expect(window.fetch).toHaveBeenCalledWith(expected);
   });
 
 })
