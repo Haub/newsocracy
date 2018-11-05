@@ -9,17 +9,18 @@ import './App.css';
 class App extends Component {
 
   handleClick = async(category) => {
-    const updatedNews = await getNews(category);
-    this.props.addCategoryNews(updatedNews);
+    const allNews = await getNews(category);
+    this.props.addCategoryNews(allNews);
   }
 
   render() {
     const { articles } = this.props;
+    
     return (
       <div className="App">
         <header className="App-header">
           <h1 className="title"> news-ocracy</h1>
-          <h5 className="sub-title"> seek perspectives.  identify bias.  engage in civil discourse. </h5>
+          <h5 className="sub-title"> seek perspective.  identify bias.  engage in civil discourse. </h5>
         </header>
         <section className="button-container">
           <NavLink to="/immigration" activeClassName="selected">
@@ -66,11 +67,11 @@ class App extends Component {
           </NavLink>
         </section>
         <Switch>
-          <Route path='/immigration' render={() => (<NewsContainer articles={articles} /> )} />
-          <Route path='/climate' render={() => (<NewsContainer articles={articles} />)} />
-          <Route path='/midterms' render={() => (<NewsContainer articles={articles} />)} />
-          <Route path='/healthcare' render={() => (<NewsContainer articles={articles} />)} />
-          <Route path='/refugees' render={() => (<NewsContainer articles={articles} />)} />
+          <Route path='/immigration' render={() => (<NewsContainer articles={articles}  /> )} />
+          <Route path='/climate' render={() => (<NewsContainer articles={articles}  />)} />
+          <Route path='/midterms' render={() => (<NewsContainer articles={articles}  />)} />
+          <Route path='/healthcare' render={() => (<NewsContainer articles={articles}  />)} />
+          <Route path='/refugees' render={() => (<NewsContainer articles={articles}  />)} />
           <Redirect from='*' to='/' />
         </Switch>
       </div>
@@ -80,7 +81,7 @@ class App extends Component {
 
 export const mapStateToProps = (state) => ({
   articles: state.articles
-})
+});
 
 export const mapDispatchToProps = (dispatch) => ({
   addCategoryNews: (articles) => dispatch(addCategoryNews(articles))

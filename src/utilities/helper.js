@@ -2,9 +2,9 @@ import { key } from './apiKey';
 import { cleanLeftData, cleanCenterData, cleanRightData } from './cleaner.js'
 
 export const getNews = async(category) => {
-  const leftResponse = await getNewsFromLeft(category);
-  const centerResponse = await getNewsFromCenter(category);
-  const rightResponse = await getNewsFromRight(category);
+  const leftResponse = await getLeftNews(category);
+  const centerResponse = await getCenterNews(category);
+  const rightResponse = await getRightNews(category);
   const leftArticles = leftResponse.articles.map(article => cleanLeftData(article));
   const rightArticles = rightResponse.articles.map(article => cleanCenterData(article));
   const centerArticles = centerResponse.articles.map(article => cleanRightData(article));
@@ -12,22 +12,22 @@ export const getNews = async(category) => {
   return allNews
 };
 
-export const getNewsFromLeft = async(category) => {
+export const getLeftNews = async(category) => {
   const response = await fetch(`https://newsapi.org/v2/everything?q=${category}&domains=huffingtonpost.com,msnbc.com&sortBy=publishedAt&apiKey=${key}`);
-  const data = await response.json();
-  return data 
+  const leftData = await response.json();
+  return leftData
 };
 
-export const getNewsFromCenter = async(category) => {
+export const getCenterNews = async(category) => {
   const response = await fetch(`https://newsapi.org/v2/everything?q=${category}&domains=npr.org,bbc.com,cnn.com&sortBy=publishedAt&apiKey=${key}`);
-  const data = await response.json();
-  return data 
+  const centerData = await response.json();
+  return centerData
 };
 
-export const getNewsFromRight = async(category) => {
+export const getRightNews = async(category) => {
   const response = await fetch(`https://newsapi.org/v2/everything?q=${category}&domains=breitbart.com,foxnews.com&sortBy=publishedAt&apiKey=${key}`);
-  const data = await response.json();
-  return data
+  const rightData = await response.json();
+  return rightData
 };
 
 
