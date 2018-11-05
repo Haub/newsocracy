@@ -33,6 +33,15 @@ describe('HELPER', () => {
     await expect(getLeftNews(url)).rejects.toEqual(expected);
   });
 
+  it('should throw an error if the getCenterNews fails', async () => {
+    const url = `https://newsapi.org/v2/everything?q=undefined&domains=huffingtonpost.com,msnbc.com&sortBy=publishedAt&apiKey=${key}`;
+    const expected = new Error('failed');
+    window.fetch = jest.fn().mockImplementation(() => {
+      return Promise.reject(new Error('failed'));
+    });
+    await expect(getLeftNews(url)).rejects.toEqual(expected);
+  });
+
   it('should call getCenterNews with the correct params', async() => {
     const expected = `https://newsapi.org/v2/everything?q=undefined&domains=npr.org,bbc.com,cnn.com&sortBy=publishedAt&apiKey=${key}`;
     window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
@@ -81,6 +90,15 @@ describe('HELPER', () => {
     }));
     const result = await getRightNews();
     expect(result).toEqual(mockArticle);
+  });
+
+  it('should throw an error if the getRightNews fails', async () => {
+    const url = `https://newsapi.org/v2/everything?q=undefined&domains=breitbart.com,foxnews.com&sortBy=publishedAt&apiKey=${key}`;
+    const expected = new Error('failed');
+    window.fetch = jest.fn().mockImplementation(() => {
+      return Promise.reject(new Error('failed'));
+    });
+    await expect(getRightNews(url)).rejects.toEqual(expected);
   });
 
   it('should throw an error if the getRightNews fails', async () => {
