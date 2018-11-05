@@ -1,0 +1,6 @@
+.news-container {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-gap: 10px;
+  color: #fff;
+}
