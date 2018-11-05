@@ -28,6 +28,7 @@ export const NewsContainer = (props) => {
   ));
 
   return (
+    if(articles) {
       <main className='news-container'>
         <section className='left column'>
           <h2>From the Left:</h2>
@@ -42,7 +43,7 @@ export const NewsContainer = (props) => {
           { displayRight }
         </section>
       </main>
-  
+    }
   )
 };
 
