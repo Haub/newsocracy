@@ -2,21 +2,25 @@ import { cleanLeftData, cleanCenterData, cleanRightData } from './cleaner.js';
 
 describe('Cleaner', () => {
   it('should return a clean news article from the left sources', () => {
-    const article = {
+    const mockDate = '2018-11-1';
+    const mockArticle = {
       source: 'MSNBC',
       title: 'Election',
+      publishedAt: '2018-11-05T15:47:25Z',
       author: 'Joe',
       url: 'www.cnn.com',
-      category: 'left'
+      category: 'left',
     };
+
     const expected = {
       source: 'MSNBC',
       title: 'Election',
+      date: '2018-11-05',
       author: 'Joe',
       url: 'www.cnn.com',
-      category: 'left'
+      category: 'left',
     };
-    const result = cleanLeftData(article);
+    const result = cleanLeftData(mockArticle);
     expect(result).toEqual(expected);
   });
 
@@ -24,6 +28,7 @@ describe('Cleaner', () => {
     const article = {
       source: 'CNN',
       title: 'Election Coverage',
+      publishedAt: '2018-11-05T15:47:25Z',
       author: 'Joe',
       url: 'www.cnn.com',
       category: 'center'
@@ -32,6 +37,7 @@ describe('Cleaner', () => {
       source: 'CNN',
       title: 'Election Coverage',
       author: 'Joe',
+      date: '2018-11-05',
       url: 'www.cnn.com',
       category: 'center'
     };
@@ -44,6 +50,7 @@ describe('Cleaner', () => {
       source: 'Fox',
       title: 'News Coverage',
       author: 'Joe',
+      publishedAt: '2018-11-05T15:47:25Z',
       url: 'www.fox.com',
       category: 'right'
     };
@@ -51,6 +58,7 @@ describe('Cleaner', () => {
       source: 'Fox',
       title: 'News Coverage',
       author: 'Joe',
+      date: '2018-11-05',
       url: 'www.fox.com',
       category: 'right'
     };
