@@ -25,13 +25,26 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": <article
-        className="left column"
+        className="article"
       >
-        <h3>
-          Name
-        </h3>
-        <p />
-        <p />
+        <img
+          alt=""
+          className="article-image"
+          height="50%"
+          width="50%"
+        />
+        <div
+          className="article-container"
+        >
+          <h3
+            className="article-title"
+          >
+            Name
+          </h3>
+          <p
+            className="article-source"
+          />
+        </div>
       </article>,
       "className": "container",
     },
@@ -42,13 +55,26 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <h3>
-            Name
-          </h3>,
-          <p />,
-          <p />,
+          <img
+            alt=""
+            className="article-image"
+            height="50%"
+            width="50%"
+          />,
+          <div
+            className="article-container"
+          >
+            <h3
+              className="article-title"
+            >
+              Name
+            </h3>
+            <p
+              className="article-source"
+            />
+          </div>,
         ],
-        "className": "left column",
+        "className": "article",
       },
       "ref": null,
       "rendered": Array [
@@ -57,33 +83,61 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "Name",
+            "alt": "",
+            "className": "article-image",
+            "height": "50%",
+            "src": undefined,
+            "width": "50%",
           },
           "ref": null,
-          "rendered": "Name",
-          "type": "h3",
+          "rendered": null,
+          "type": "img",
         },
         Object {
           "instance": null,
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": undefined,
+            "children": Array [
+              <h3
+                className="article-title"
+              >
+                Name
+              </h3>,
+              <p
+                className="article-source"
+              />,
+            ],
+            "className": "article-container",
           },
           "ref": null,
-          "rendered": null,
-          "type": "p",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": undefined,
-          },
-          "ref": null,
-          "rendered": null,
-          "type": "p",
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Name",
+                "className": "article-title",
+              },
+              "ref": null,
+              "rendered": "Name",
+              "type": "h3",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": undefined,
+                "className": "article-source",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "p",
+            },
+          ],
+          "type": "div",
         },
       ],
       "type": "article",
@@ -97,13 +151,26 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": <article
-          className="left column"
+          className="article"
         >
-          <h3>
-            Name
-          </h3>
-          <p />
-          <p />
+          <img
+            alt=""
+            className="article-image"
+            height="50%"
+            width="50%"
+          />
+          <div
+            className="article-container"
+          >
+            <h3
+              className="article-title"
+            >
+              Name
+            </h3>
+            <p
+              className="article-source"
+            />
+          </div>
         </article>,
         "className": "container",
       },
@@ -114,13 +181,26 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            <h3>
-              Name
-            </h3>,
-            <p />,
-            <p />,
+            <img
+              alt=""
+              className="article-image"
+              height="50%"
+              width="50%"
+            />,
+            <div
+              className="article-container"
+            >
+              <h3
+                className="article-title"
+              >
+                Name
+              </h3>
+              <p
+                className="article-source"
+              />
+            </div>,
           ],
-          "className": "left column",
+          "className": "article",
         },
         "ref": null,
         "rendered": Array [
@@ -129,33 +209,61 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "Name",
+              "alt": "",
+              "className": "article-image",
+              "height": "50%",
+              "src": undefined,
+              "width": "50%",
             },
             "ref": null,
-            "rendered": "Name",
-            "type": "h3",
+            "rendered": null,
+            "type": "img",
           },
           Object {
             "instance": null,
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": undefined,
+              "children": Array [
+                <h3
+                  className="article-title"
+                >
+                  Name
+                </h3>,
+                <p
+                  className="article-source"
+                />,
+              ],
+              "className": "article-container",
             },
             "ref": null,
-            "rendered": null,
-            "type": "p",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": undefined,
-            },
-            "ref": null,
-            "rendered": null,
-            "type": "p",
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Name",
+                  "className": "article-title",
+                },
+                "ref": null,
+                "rendered": "Name",
+                "type": "h3",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": undefined,
+                  "className": "article-source",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "p",
+              },
+            ],
+            "type": "div",
           },
         ],
         "type": "article",

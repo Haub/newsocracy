@@ -1,23 +1,11 @@
 .article {
   height: 16rem;
-  border-bottom: 1px solid red;
-
+  border-bottom: 1px solid #36454f;;
 }
 
 .article {
-  /*display: flex;*/
   padding: 0.5rem;
   width: 80%;
-}
-
-.article-image {
-  /*align-items: flex-start;*/
- /* justify-content: center;
-  overflow: hidden;*/
-}
-
-.article-container {
- /* align-items: flex-end;*/
 }
 
 .article-title {
