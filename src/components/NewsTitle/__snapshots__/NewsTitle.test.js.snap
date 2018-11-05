@@ -29,9 +29,9 @@ ShallowWrapper {
       >
         <h3>
           Name
-          <p />
-          <p />
         </h3>
+        <p />
+        <p />
       </article>,
       "className": "container",
     },
@@ -41,12 +41,71 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "children": <h3>
-          Name
-          <p />
-          <p />
-        </h3>,
+        "children": Array [
+          <h3>
+            Name
+          </h3>,
+          <p />,
+          <p />,
+        ],
         "className": "left column",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Name",
+          },
+          "ref": null,
+          "rendered": "Name",
+          "type": "h3",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": undefined,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": undefined,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "p",
+        },
+      ],
+      "type": "article",
+    },
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <article
+          className="left column"
+        >
+          <h3>
+            Name
+          </h3>
+          <p />
+          <p />
+        </article>,
+        "className": "container",
       },
       "ref": null,
       "rendered": Object {
@@ -55,14 +114,27 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            "Name",
+            <h3>
+              Name
+            </h3>,
             <p />,
             <p />,
           ],
+          "className": "left column",
         },
         "ref": null,
         "rendered": Array [
-          "Name",
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Name",
+            },
+            "ref": null,
+            "rendered": "Name",
+            "type": "h3",
+          },
           Object {
             "instance": null,
             "key": undefined,
@@ -86,82 +158,6 @@ ShallowWrapper {
             "type": "p",
           },
         ],
-        "type": "h3",
-      },
-      "type": "article",
-    },
-    "type": "div",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": <article
-          className="left column"
-        >
-          <h3>
-            Name
-            <p />
-            <p />
-          </h3>
-        </article>,
-        "className": "container",
-      },
-      "ref": null,
-      "rendered": Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": <h3>
-            Name
-            <p />
-            <p />
-          </h3>,
-          "className": "left column",
-        },
-        "ref": null,
-        "rendered": Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
-              "Name",
-              <p />,
-              <p />,
-            ],
-          },
-          "ref": null,
-          "rendered": Array [
-            "Name",
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": undefined,
-              },
-              "ref": null,
-              "rendered": null,
-              "type": "p",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": undefined,
-              },
-              "ref": null,
-              "rendered": null,
-              "type": "p",
-            },
-          ],
-          "type": "h3",
-        },
         "type": "article",
       },
       "type": "div",

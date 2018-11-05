@@ -28,20 +28,21 @@ export const NewsContainer = (props) => {
   ));
 
   return (
-    <main className='news-container'>
-      <section className='left column'>
-        <h2>From the Left:</h2>
-        { displayLeft }
-      </section>
-      <section className='center column'>
-        <h2>From the Center:</h2>
-        { displayCenter }
-      </section>
-      <section className='right column'>
-        <h2>From the Right:</h2>
-        { displayRight }
-      </section>
-    </main>
+      <main className='news-container'>
+        <section className='left column'>
+          <h2>From the Left:</h2>
+          { displayLeft }
+        </section>
+        <section className='center column'>
+          <h2>From the Center:</h2>
+          { displayCenter }
+        </section>
+        <section className='right column'>
+          <h2>From the Right:</h2>
+          { displayRight }
+        </section>
+      </main>
+  
   )
 };
 
