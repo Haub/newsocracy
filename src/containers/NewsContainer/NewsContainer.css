@@ -3,4 +3,9 @@
   grid-template-columns: 33% 33% 33%;
   grid-gap: 10px;
   color: #fff;
+  margin-left: 3rem;
+}
+
+.left-column, .center-column, .right-column {
+  width: 90%;
 }
