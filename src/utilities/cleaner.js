@@ -1,4 +1,4 @@
-export const cleanLeftData = (article) => {
+export const cleanLeftData = (article, category, index) => {
   const date = article.publishedAt.slice(0,10);
 
   return {
@@ -8,11 +8,13 @@ export const cleanLeftData = (article) => {
     author: article.author,
     url: article.url,
     image: article.urlToImage,
-    category: 'left'
+    category: category,
+    bias: 'left',
+    id: 'left' + index
   }
 };
 
-export const cleanCenterData = (article) => {
+export const cleanCenterData = (article, category, index) => {
   const date = article.publishedAt.slice(0,10);
 
   return {
@@ -22,11 +24,13 @@ export const cleanCenterData = (article) => {
     author: article.author,
     url: article.url,
     image: article.urlToImage,
-    category: 'center'
+    category: category,
+    bias: 'center',
+    id: 'center' + index
   }
 };
 
-export const cleanRightData = (article) => {
+export const cleanRightData = (article, category, index) => {
   const date = article.publishedAt.slice(0,10);
   
   return {
@@ -36,6 +40,8 @@ export const cleanRightData = (article) => {
     author: article.author,
     url: article.url,
     image: article.urlToImage,
-    category: 'right'
+    category: category,
+    bias: 'right',
+    id: 'right' + index
   }
 };
