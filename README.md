@@ -16,13 +16,13 @@ Run tests with `npm test`.
 ## Final Result
 
 ### Screenshots
-![alt tag](https://github.com/haub/newsocracy/blob/src/public/assets/screenshot2.png)
-![alt tag](https://github.com/haub/newsocracy/blob/src/public/assets/screenshot3.png)
+![alt tag](https://github.com/haub/newsocracy/blob/master/src/assets/screenshot2.png)
+![alt tag](https://github.com/haub/newsocracy/blob/master/src/assets/screenshot3.png)
 
 
 ### Wireframes
-![alt tag](https://github.com/haub/newsocracy/blob/src/public/assets/wireframe1.png)
-![alt tag](https://github.com/haub/newsocracy/blob/src/public/assets/wireframe2.png)
-![alt tag](https://github.com/haub/newsocracy/blob/src/public/assets/wireframe3.png)
+![alt tag](https://github.com/haub/newsocracy/blob/master/src/assets/wireframe1.png)
+![alt tag](https://github.com/haub/newsocracy/blob/master/src/assets/wireframe2.png)
+![alt tag](https://github.com/haub/newsocracy/blob/master/src/assets/wireframe3.png)
 
 
