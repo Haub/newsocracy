@@ -1,3 +1,18 @@
+.article {
+  height: 16rem;
+  border-bottom: 1px solid #36454f;;
+}
 
+.article {
+  padding: 0.5rem;
+  width: 80%;
+}
 
+.article-title {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
 
+.article-source, .article-date { 
+  font-size: 0.9rem;
+}

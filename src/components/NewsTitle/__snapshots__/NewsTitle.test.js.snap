@@ -25,13 +25,26 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": <article
-        className="left column"
+        className="article"
       >
-        <h3>
-          Name
-          <p />
-          <p />
-        </h3>
+        <img
+          alt=""
+          className="article-image"
+          height="50%"
+          width="50%"
+        />
+        <div
+          className="article-container"
+        >
+          <h3
+            className="article-title"
+          >
+            Name
+          </h3>
+          <p
+            className="article-source"
+          />
+        </div>
       </article>,
       "className": "container",
     },
@@ -41,53 +54,92 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "children": <h3>
-          Name
-          <p />
-          <p />
-        </h3>,
-        "className": "left column",
+        "children": Array [
+          <img
+            alt=""
+            className="article-image"
+            height="50%"
+            width="50%"
+          />,
+          <div
+            className="article-container"
+          >
+            <h3
+              className="article-title"
+            >
+              Name
+            </h3>
+            <p
+              className="article-source"
+            />
+          </div>,
+        ],
+        "className": "article",
       },
       "ref": null,
-      "rendered": Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            "Name",
-            <p />,
-            <p />,
-          ],
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "alt": "",
+            "className": "article-image",
+            "height": "50%",
+            "src": undefined,
+            "width": "50%",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "img",
         },
-        "ref": null,
-        "rendered": Array [
-          "Name",
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": undefined,
-            },
-            "ref": null,
-            "rendered": null,
-            "type": "p",
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <h3
+                className="article-title"
+              >
+                Name
+              </h3>,
+              <p
+                className="article-source"
+              />,
+            ],
+            "className": "article-container",
           },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": undefined,
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Name",
+                "className": "article-title",
+              },
+              "ref": null,
+              "rendered": "Name",
+              "type": "h3",
             },
-            "ref": null,
-            "rendered": null,
-            "type": "p",
-          },
-        ],
-        "type": "h3",
-      },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": undefined,
+                "className": "article-source",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "p",
+            },
+          ],
+          "type": "div",
+        },
+      ],
       "type": "article",
     },
     "type": "div",
@@ -99,13 +151,26 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": <article
-          className="left column"
+          className="article"
         >
-          <h3>
-            Name
-            <p />
-            <p />
-          </h3>
+          <img
+            alt=""
+            className="article-image"
+            height="50%"
+            width="50%"
+          />
+          <div
+            className="article-container"
+          >
+            <h3
+              className="article-title"
+            >
+              Name
+            </h3>
+            <p
+              className="article-source"
+            />
+          </div>
         </article>,
         "className": "container",
       },
@@ -115,53 +180,92 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": <h3>
-            Name
-            <p />
-            <p />
-          </h3>,
-          "className": "left column",
+          "children": Array [
+            <img
+              alt=""
+              className="article-image"
+              height="50%"
+              width="50%"
+            />,
+            <div
+              className="article-container"
+            >
+              <h3
+                className="article-title"
+              >
+                Name
+              </h3>
+              <p
+                className="article-source"
+              />
+            </div>,
+          ],
+          "className": "article",
         },
         "ref": null,
-        "rendered": Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
-              "Name",
-              <p />,
-              <p />,
-            ],
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "alt": "",
+              "className": "article-image",
+              "height": "50%",
+              "src": undefined,
+              "width": "50%",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "img",
           },
-          "ref": null,
-          "rendered": Array [
-            "Name",
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": undefined,
-              },
-              "ref": null,
-              "rendered": null,
-              "type": "p",
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <h3
+                  className="article-title"
+                >
+                  Name
+                </h3>,
+                <p
+                  className="article-source"
+                />,
+              ],
+              "className": "article-container",
             },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": undefined,
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Name",
+                  "className": "article-title",
+                },
+                "ref": null,
+                "rendered": "Name",
+                "type": "h3",
               },
-              "ref": null,
-              "rendered": null,
-              "type": "p",
-            },
-          ],
-          "type": "h3",
-        },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": undefined,
+                  "className": "article-source",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "p",
+              },
+            ],
+            "type": "div",
+          },
+        ],
         "type": "article",
       },
       "type": "div",

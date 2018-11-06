@@ -2,5 +2,28 @@
   display: grid;
   grid-template-columns: 33% 33% 33%;
   grid-gap: 10px;
-  color: #fff;
+  color: #36454f;
+  margin: 3rem 0 0 3rem;
+}
+
+.left-column, .center-column, .right-column {
+  width: 90%;
+}
+
+.left-title {
+  color: blue;
+  width: 90%;
+  border-bottom: 3px solid blue;
+}
+
+.center-title {
+  color: orange;
+  width: 90%;
+  border-bottom: 3px solid orange;
+}
+
+.right-title {
+  color: red;
+  width: 90%;
+  border-bottom: 3px solid red;
 }
