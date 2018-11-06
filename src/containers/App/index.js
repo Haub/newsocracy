@@ -69,18 +69,37 @@ class App extends Component {
         </section>
         <Switch>
           <Route path='/immigration/:id' render={({match}) => {
-            console.log(match)
             let { id } = match.params;
-            console.log(articles)
-            const foundArticle = articles.find(article => article.id === id)
-            console.log(foundArticle);
+            const foundArticle = articles.find(article => article.id === id);
             return <NewsArticle {...foundArticle} />
           }} />
+          <Route path='/climate/:id' render={({match}) => {
+            let { id } = match.params;
+            const foundArticle = articles.find(article => article.id === id);
+            return <NewsArticle {...foundArticle} />
+          }} />
+          <Route path='/midterms/:id' render={({match}) => {
+            let { id } = match.params;
+            const foundArticle = articles.find(article => article.id === id);
+            return <NewsArticle {...foundArticle} />
+          }} />
+          <Route path='/healthcare/:id' render={({match}) => {
+            let { id } = match.params;
+            const foundArticle = articles.find(article => article.id === id);
+            return <NewsArticle {...foundArticle} />
+          }} />
+          <Route path='/refugees/:id' render={({match}) => {
+            let { id } = match.params;
+            const foundArticle = articles.find(article => article.id === id);
+            return <NewsArticle {...foundArticle} />
+          }} />
+
           <Route path='/immigration' render={() => (<NewsContainer articles={articles}  /> )} />
           <Route path='/climate' render={() => (<NewsContainer articles={articles}  />)} />
           <Route path='/midterms' render={() => (<NewsContainer articles={articles}  />)} />
           <Route path='/healthcare' render={() => (<NewsContainer articles={articles}  />)} />
           <Route path='/refugees' render={() => (<NewsContainer articles={articles}  />)} />
+          <Redirect from='*' to='/' />
         </Switch>
  
       </div>
