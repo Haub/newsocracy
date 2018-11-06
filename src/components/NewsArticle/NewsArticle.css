@@ -1,0 +1,29 @@
+.article-page {
+  width: 58%;
+  margin: 0 auto;
+}
+
+.headline {
+  color: #121212;
+}
+
+.author {
+  color: orange;
+  margin: 0.5rem 0rem;
+}
+
+.date {
+  margin: 0.5rem 0rem;
+}
+
+.author, .date {
+  font-size: 1rem;
+}
+
+.story {
+  margin-top: 1rem;
+}
+
+.article-content, .article-read-more, .article-head-title, .url {
+  text-align: left;
+}

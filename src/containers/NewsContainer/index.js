@@ -1,7 +1,5 @@
 import React from 'react';
 import { NewsTitle } from '../../components/NewsTitle';
-import { Route } from 'react-router-dom';
-import { NewsArticle } from '../../components/NewsArticle';
 import './NewsContainer.css';
 
 export const NewsContainer = (props) => {

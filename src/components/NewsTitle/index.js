@@ -1,6 +1,5 @@
 import React from 'react';
-import { Link, Route } from 'react-router-dom';
-import { NewsArticle } from '../NewsArticle';
+import { Link } from 'react-router-dom';
 import './NewsTitle.css';
 
 export const NewsTitle = ({ article }) => {
