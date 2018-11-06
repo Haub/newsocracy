@@ -16,13 +16,13 @@ Run tests with `npm test`.
 ## Final Result
 
 ### Screenshots
-![Alt text](./src/assets/wireframe2.png "App Wireframe 1")
-![Alt text](./src/assets/wireframe3.png "App Wireframe 2")
+![Alt text](./assets/wireframe2.png "App Wireframe 1")
+![Alt text](./assets/wireframe3.png "App Wireframe 2")
 
 ### Wireframes
-![Alt text](./src/assets/wireframe1.png "App Wireframe 1")
-![Alt text](./src/assets/wireframe2.png "App Wireframe 2")
-![Alt text](./src/assets/wireframe3.png "App Wireframe 3")
+![Alt text](./assets/wireframe1.png "App Wireframe 1")
+![Alt text](./assets/wireframe2.png "App Wireframe 2")
+![Alt text](./assets/wireframe3.png "App Wireframe 3")
 
 
 
