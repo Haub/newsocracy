@@ -8,8 +8,8 @@ export const cleanLeftData = (article, category, index) => {
     author: article.author,
     url: article.url,
     image: article.urlToImage,
+    content: article.content,
     category: category,
-    bias: 'left',
     id: 'left' + index
   }
 };
@@ -24,8 +24,8 @@ export const cleanCenterData = (article, category, index) => {
     author: article.author,
     url: article.url,
     image: article.urlToImage,
+    content: article.content,
     category: category,
-    bias: 'center',
     id: 'center' + index
   }
 };
@@ -40,8 +40,8 @@ export const cleanRightData = (article, category, index) => {
     author: article.author,
     url: article.url,
     image: article.urlToImage,
+    content: article.content,
     category: category,
-    bias: 'right',
     id: 'right' + index
   }
 };
