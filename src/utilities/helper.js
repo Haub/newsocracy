@@ -6,9 +6,9 @@ export const getNews = async(category) => {
     const leftResponse = await getLeftNews(category);
     const centerResponse = await getCenterNews(category);
     const rightResponse = await getRightNews(category);
-    const leftArticles = leftResponse.articles.map(article => cleanLeftData(article));
-    const rightArticles = rightResponse.articles.map(article => cleanCenterData(article));
-    const centerArticles = centerResponse.articles.map(article => cleanRightData(article));
+    const leftArticles = leftResponse.articles.map((article, index) => cleanLeftData(article, category, index));
+    const rightArticles = rightResponse.articles.map((article, index) => cleanCenterData(article, category, index));
+    const centerArticles = centerResponse.articles.map((article, index) => cleanRightData(article, category, index));
     const allNews = [...leftArticles, ...centerArticles, ...rightArticles];
     return allNews
   } catch(error) {

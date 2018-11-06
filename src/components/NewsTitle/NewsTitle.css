@@ -1,16 +1,17 @@
 .article {
   height: 16rem;
-  border-bottom: 1px solid #36454f;;
-}
-
-.article {
+  border-bottom: 1px solid #36454f;
   padding: 0.5rem;
-  width: 80%;
+  width: 84%;
+  background-color: #f6f6f6;
+  margin: 1rem 0 auto;
 }
 
 .article-title {
   font-size: 1rem;
   margin-top: 0.5rem;
+  color: #36454f;
+  text-decoration: none;
 }
 
 .article-source, .article-date { 

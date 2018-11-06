@@ -1,31 +1,40 @@
 import React from 'react';
 import { NewsTitle } from '../../components/NewsTitle';
+import { Route } from 'react-router-dom';
+import { NewsArticle } from '../../components/NewsArticle';
 import './NewsContainer.css';
 
 export const NewsContainer = (props) => {
   let uuidv4 = require("uuid/v4");
   const {articles} = props;
 
-  const displayLeft = articles.slice(0, 20).map(article => (
-    <NewsTitle
-      article={article}
-      key={uuidv4()}
-    />
-  ));
+  const displayLeft = articles.slice(0, 20).map(article => {
+    const id = uuidv4();
+    return (
+      <NewsTitle
+        article={article}
+        key={id}
+      />)
+  });
 
-  const displayCenter = articles.slice(20,40).map(article => (
-    <NewsTitle
-      article={article}
-      key={uuidv4()}
-    />
-  ));
 
-  const displayRight = articles.slice(40, 60).map(article => (
-    <NewsTitle
-      article={article}
-      key={uuidv4()}
-    />
-  ));
+  const displayCenter = articles.slice(20,40).map(article => {
+    const id = uuidv4();
+    return (
+      <NewsTitle
+        article={article}
+        key={id}
+      />)
+  });
+
+  const displayRight = articles.slice(40, 60).map(article => {
+    const id = uuidv4();
+    return (
+      <NewsTitle
+        article={article}
+        key={id}
+      />)
+  });
 
   return (
     <main className='news-container'>

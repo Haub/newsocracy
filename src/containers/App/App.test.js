@@ -10,8 +10,20 @@ describe('APP', () => {
    expect(wrapper).toMatchSnapshot();
   });
 
-  it('should call ', () => {
-
+  it('should invoke getNews when a button is pressed', () => {
+    const wrapper = shallow(<App />);
+    const spy = jest.spyOn(wrapper.instance(), 'mockGetNews');
+    wrapper.instance().forceUpdate();
+    const mockArticle = {
+      source: 'MSNBC',
+      title: 'Election',
+      publishedAt: '2018-11-05T15:47:25Z',
+      author: 'Joe',
+      url: 'www.cnn.com',
+      category: 'left',
+    };
+    wrapper.find('.topic-button').simulate('click', mockEvent);
+    expect(spy).toHaveBeenCalled();
   });
 })
 
