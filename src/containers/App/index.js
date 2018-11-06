@@ -4,6 +4,7 @@ import { Route, NavLink, withRouter, Switch, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { addCategoryNews } from '../../actions';
 import { NewsContainer } from '../NewsContainer';
+import { NewsArticle } from '../../components/NewsArticle';
 import './App.css';
 
 class App extends Component {
@@ -67,13 +68,21 @@ class App extends Component {
           </NavLink>
         </section>
         <Switch>
+          <Route path='/immigration/:id' render={({match}) => {
+            console.log(match)
+            let { id } = match.params;
+            console.log(articles)
+            const foundArticle = articles.find(article => article.id === id)
+            console.log(foundArticle);
+            return <NewsArticle {...foundArticle} />
+          }} />
           <Route path='/immigration' render={() => (<NewsContainer articles={articles}  /> )} />
           <Route path='/climate' render={() => (<NewsContainer articles={articles}  />)} />
           <Route path='/midterms' render={() => (<NewsContainer articles={articles}  />)} />
           <Route path='/healthcare' render={() => (<NewsContainer articles={articles}  />)} />
           <Route path='/refugees' render={() => (<NewsContainer articles={articles}  />)} />
-          <Redirect from='*' to='/' />
         </Switch>
+ 
       </div>
     );
   }
