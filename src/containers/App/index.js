@@ -3,11 +3,13 @@ import { getNews } from '../../utilities/helper';
 import { Route, NavLink, withRouter, Switch, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { addCategoryNews } from '../../actions';
-import { NewsContainer } from '../NewsContainer';
+import { NewsContainer } from '../../components/NewsContainer';
 import { NewsArticle } from '../../components/NewsArticle';
 import './App.css';
+import PropTypes from 'prop-types';
 
-class App extends Component {
+export class App extends Component {
+  
 
   handleClick = async(category) => {
     const allNews = await getNews(category);
@@ -99,13 +101,18 @@ class App extends Component {
           <Route path='/midterms' render={() => (<NewsContainer articles={articles}  />)} />
           <Route path='/healthcare' render={() => (<NewsContainer articles={articles}  />)} />
           <Route path='/refugees' render={() => (<NewsContainer articles={articles}  />)} />
-          <Redirect from='*' to='/' />
+          <Redirect to="/" />
         </Switch>
  
       </div>
     );
   }
 }
+
+App.propTypes = {
+  articles: PropTypes.array,
+  addCategoryNews: PropTypes.func
+};
 
 export const mapStateToProps = (state) => ({
   articles: state.articles

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './NewsTitle.css';
+import PropTypes from 'prop-types';
 
 export const NewsTitle = ({ article }) => {
 
@@ -19,3 +20,7 @@ export const NewsTitle = ({ article }) => {
   )
 
 };
+
+NewsTitle.propTypes = {
+  article: PropTypes.object
+}

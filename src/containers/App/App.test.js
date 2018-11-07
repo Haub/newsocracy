@@ -1,8 +1,10 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import App from './index.js';
+import { App } from './index.js';
 import { mapStateToProps, mapDispatchToProps } from './index.js';
 import { addCategoryNews } from '../../actions';
+import * as API from '../../utilities/helper';
+
 
 describe('APP', () => { 
   it('should match the snapshot', () => {
@@ -12,8 +14,7 @@ describe('APP', () => {
 
   it('should invoke getNews when a button is pressed', () => {
     const wrapper = shallow(<App />);
-    const spy = jest.spyOn(wrapper.instance(), 'mockGetNews');
-    wrapper.instance().forceUpdate();
+    const spy = jest.spyOn(API, 'getNews');
     const mockArticle = {
       source: 'MSNBC',
       title: 'Election',
@@ -22,7 +23,7 @@ describe('APP', () => {
       url: 'www.cnn.com',
       category: 'left',
     };
-    wrapper.find('.topic-button').simulate('click', mockEvent);
+    wrapper.instance().handleClick('immigration');
     expect(spy).toHaveBeenCalled();
   });
 })
