@@ -1,8 +1,8 @@
 import React from 'react';
-import { Link } from 'react-dom';
 import './NewsArticle.css';
+import PropTypes from 'prop-types';
 
-export const NewsArticle = ({ author, category, date, id, image, source, title, url, content }) => {
+export const NewsArticle = ({ author, category, date, id, image, title, url, content }) => {
   
   return (
     <div className='article-page'>
@@ -20,4 +20,15 @@ export const NewsArticle = ({ author, category, date, id, image, source, title, 
     </div>
 
   )
+}
+
+NewsArticle.propTypes = {
+  author: PropTypes.string,
+  category: PropTypes.string, 
+  date: PropTypes.string,
+  id: PropTypes.string,
+  image: PropTypes.string,
+  title: PropTypes.string,
+  url: PropTypes.string,
+  content: PropTypes.string
 }
